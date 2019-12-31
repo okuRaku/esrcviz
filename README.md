@@ -27,4 +27,14 @@ Proposed translation:
 
 Regarding deletes, it should be visually interesting to have a 'delete' action corresponding to a cache expiring 30 days after the last tend or sow.  To achieve this, the input data will be augmented as the output data is generated.
 
+Another way of doing that would be to use this gource config and make sure the time was lined up correctly: 
+
+```
+-i, --file-idle-time SECONDS
+            Time in seconds files remain idle before they are removed or 0
+            for no limit.
+```
+
+Will have to try that out.
+
 Gource config file is part of the repo - run with ```gource outfile.log --load-config gource.cfg``` (edit config to taste)
