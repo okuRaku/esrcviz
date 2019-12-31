@@ -26,3 +26,5 @@ Proposed translation:
 * color: By wormhole class: ![#e9967a](https://placehold.it/15/e9967a/000000?text=+) `C1 #E9967A`; ![#FA8072](https://placehold.it/15/FA8072/000000?text=+) `C2 #FA8072`; ![#FF6347](https://placehold.it/15/FF6347/000000?text=+) `C3 #FF6347`; ![#FF4500](https://placehold.it/15/FF4500/000000?text=+) `C4 #FF4500`; ![#FF0000](https://placehold.it/15/FF0000/000000?text=+) `C5 #FF0000`; ![#DC143C](https://placehold.it/15/DC143C/000000?text=+) `C6 #DC143C`
 
 Regarding deletes, it should be visually interesting to have a 'delete' action corresponding to a cache expiring 30 days after the last tend or sow.  To achieve this, the input data will be augmented as the output data is generated.
+
+Gource config file is part of the repo - run with ```gource outfile.log --load-config gource.cfg``` (edit config to taste)
