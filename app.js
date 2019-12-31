@@ -63,7 +63,8 @@ const records = parse(fs.readFileSync(__dirname+'/2019-1124_sows_tends.csv', ), 
       new Date(record.ActivityDate).getTime()/1000,
       record.Pilot,
       convertEntryType(record.EntryType), 
-      record.regionName + '/' + record.System,
+      record.System.slice(0,4) + '/' + record.System,
+      // record.regionName + '/' + record.System,
       lookupColor(record.class)
     ]
   }
@@ -90,7 +91,7 @@ records.forEach(i => {
   })
   ageTracker[i[3]] = i[0];
 });
-const out = fs.createWriteStream(__dirname+'/outfile.log');
+const out = fs.createWriteStream(__dirname+'/outfile_style_2.log');
 stringify(
   records.concat(expireRecords).sort((a,b) => a[0] - b[0])
   , {delimiter: '|'}).pipe(out);
