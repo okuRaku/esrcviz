@@ -21,20 +21,16 @@ Output format sample:
 Proposed translation:
 * timestamp: ActivityDate converted to epoch
 * author: Pilot
-* type: Sowing will be considered an Add, Tending a Modify, and we'll have a special case for Delete (see below)
+* type: Sowing will be considered an Add, Tending a Modify, and Agent will be considered Delete
 * file: regionName/system
 * color: By wormhole class: ![#e9967a](https://placehold.it/15/e9967a/000000?text=+) `C1 #E9967A`; ![#FA8072](https://placehold.it/15/FA8072/000000?text=+) `C2 #FA8072`; ![#FF6347](https://placehold.it/15/FF6347/000000?text=+) `C3 #FF6347`; ![#FF4500](https://placehold.it/15/FF4500/000000?text=+) `C4 #FF4500`; ![#FF0000](https://placehold.it/15/FF0000/000000?text=+) `C5 #FF0000`; ![#DC143C](https://placehold.it/15/DC143C/000000?text=+) `C6 #DC143C`
 
-Regarding deletes, it should be visually interesting to have a 'delete' action corresponding to a cache expiring 30 days after the last tend or sow.  To achieve this, the input data will be augmented as the output data is generated.
-
-Another way of doing that would be to use this gource config and make sure the time was lined up correctly: 
+Regarding cache expiration, current preference is to use the below settings to allow Gource to hide any 'file' (cache) that isn't touched in an amount of time that should correspond to 30 real time days.
 
 ```
 -i, --file-idle-time SECONDS
             Time in seconds files remain idle before they are removed or 0
             for no limit.
 ```
-
-Will have to try that out.
 
 Gource config file is part of the repo - run with ```gource outfile.log --load-config gource.cfg``` (edit config to taste)
