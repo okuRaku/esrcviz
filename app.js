@@ -54,7 +54,7 @@ const lookupColor = (whClass) => {
 // };
 
 
-const records = parse(fs.readFileSync(__dirname+'/2019-1124_sows_tends.csv', ), {
+const records = parse(fs.readFileSync(__dirname+'/sows_tends_2019-0101_to_2019-1231.csv', ), {
     from_line: 2,
     columns: ['InitialSeedDate', 'ActivityDate', 'EntryType', 'System', 'Pilot', 'class', 'regionName', 'age'],
   on_record: (record) => {
@@ -91,7 +91,7 @@ records.forEach(i => {
   })
   ageTracker[i[3]] = i[0];
 });
-const out = fs.createWriteStream(__dirname+'/outfile.log');
+const out = fs.createWriteStream(__dirname+'/outfile_2019.log');
 stringify(
   records.concat(expireRecords).sort((a,b) => a[0] - b[0])
   , {delimiter: '|'}).pipe(out);
