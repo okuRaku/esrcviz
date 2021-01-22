@@ -1,6 +1,6 @@
 # esrcviz - Gource visualization of ESRC tend/sow history
 
-Input is a csv file provided.  This script will translate that csv into a [log file](https://github.com/acaudwell/Gource/wiki/Custom-Log-Format) that Gource can parse and visualize.
+Input is a csv file provided.  This script will translate that csv into a [log file](https://github.com/acaudwell/Gource/wiki/Custom-Log-Format) that Gource can parse and visualize.  This tool was used in the production of [this video.](https://www.youtube.com/watch?v=oPeKIaOv_7o)
 
 Input format sample:
 ```csv
